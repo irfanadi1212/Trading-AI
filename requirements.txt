@@ -1,0 +1,23 @@
+# PDF ingestion & Vector Database
+chromadb>=0.4.24,<0.6.0
+pdfplumber==0.11.4
+sentence-transformers==3.0.1
+
+# Multi-Agent Framework & Market Data
+crewai>=0.80.0
+crewai-tools>=0.17.0
+pydantic>=2.7.0,<2.10.0
+requests==2.32.3
+
+# Async Infrastructure
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+celery==5.4.0
+redis==5.0.8
+
+# Frontend & Notifikasi
+streamlit==1.38.0
+python-dotenv==1.0.1
+
+pytesseract==0.3.13
+pdf2image==1.17.0
