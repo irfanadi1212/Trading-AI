@@ -1,24 +1,14 @@
 """
 app/services/crew_agents.py
 ==============================
-5 Agen CrewAI yang menganalisa market mengikuti alur logis:
-HTF Bias -> Liquidity Mapping -> Session/Timing -> Entry Precision (MSNR)
--> Trade Plan Synthesis
-
-ATURAN NON-NEGOTIABLE (ditegaskan di tiap system prompt):
-1. Setiap klaim WAJIB didukung hasil retrieval dari strategy_lookup_tool,
-   bukan pengetahuan umum LLM.
-2. Killzone = confidence booster, BUKAN syarat wajib entry. Sinyal valid
-   di luar killzone tetap boleh dieksekusi (label: standard confidence).
-3. Jika bukti di dokumen tidak cukup, agen WAJIB menyatakan
-   "insufficient evidence" -- dilarang menebak/berhalusinasi.
+5 Agen CrewAI: HTF Bias -> Liquidity -> Session/Timing -> Entry Precision (MSNR)
+-> Trade Plan Synthesis. LLM: OpenAI GPT-5.6 Terra.
 """
 
 import logging
 from typing import Type
 
-from crewai import LLM
-from crewai import Agent, Task, Crew, Process
+from crewai import Agent, Task, Crew, Process, LLM
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 
@@ -31,20 +21,13 @@ logger = logging.getLogger("crew_agents")
 
 settings = get_settings()
 
-
-# ------------------------------------------------------------------
-# LLM Provider: Gemini (via LiteLLM, dipakai CrewAI di balik layar)
-# ------------------------------------------------------------------
 gemini_llm = LLM(
-  model="gemini/gemini-3.5-flash-lite",  # model hemat biaya untuk testing
-  api_key=settings.GEMINI_API_KEY,
-  temperature=0.2,  # rendah -- kita mau presisi merujuk dokumen, bukan kreatif
+    model="openai/gpt-5.6-luna",
+    api_key=settings.EXPLABS_API_KEY,
+    base_url="https://api.experientiallabs.ai/v1",
 )
 
 
-# ====================================================================
-# TOOL 1: RAG Lookup Tool -- wrapper CrewAI di atas query_strategy()
-# ====================================================================
 class StrategyLookupInput(BaseModel):
     query: str = Field(..., description="Istilah/pertanyaan strategi, contoh: 'RBS entry rules' atau 'killzone times Jakarta'")
     category_filter: str = Field(
@@ -68,9 +51,6 @@ class StrategyLookupTool(BaseTool):
         return query_strategy(query=query, category_filter=category)
 
 
-# ====================================================================
-# TOOL 2: Market Data Tool -- wrapper CrewAI di atas fetch_ohlcv()
-# ====================================================================
 class MarketDataInput(BaseModel):
     symbol: str = Field(..., description="Contoh: 'XAU/USD', 'EUR/USD', 'BTC/USD'")
     interval: str = Field(..., description="Contoh: '15min', '1h', '4h', '1day'")
@@ -94,9 +74,6 @@ strategy_tool = StrategyLookupTool()
 market_tool = MarketDataTool()
 
 
-# ====================================================================
-# AGENT DEFINITIONS
-# ====================================================================
 htf_bias_agent = Agent(
     role="HTF Structure & Bias Analyst",
     goal=(
@@ -115,6 +92,7 @@ htf_bias_agent = Agent(
     ),
     tools=[strategy_tool, market_tool],
     llm=gemini_llm,
+    max_iter=3,
     verbose=True,
     allow_delegation=False,
 )
@@ -135,6 +113,7 @@ liquidity_agent = Agent(
     ),
     tools=[strategy_tool, market_tool],
     llm=gemini_llm,
+    max_iter=3,
     verbose=True,
     allow_delegation=False,
 )
@@ -157,6 +136,7 @@ timing_agent = Agent(
     ),
     tools=[strategy_tool, market_tool],
     llm=gemini_llm,
+    max_iter=3,
     verbose=True,
     allow_delegation=False,
 )
@@ -178,6 +158,7 @@ entry_precision_agent = Agent(
     ),
     tools=[strategy_tool, market_tool],
     llm=gemini_llm,
+    max_iter=3,
     verbose=True,
     allow_delegation=False,
 )
@@ -185,28 +166,62 @@ entry_precision_agent = Agent(
 synthesizer_agent = Agent(
     role="Trade Plan Synthesizer",
     goal=(
-        "Menggabungkan output 4 agen sebelumnya menjadi satu trading plan "
-        "final: bias, target likuiditas, level entry, stop loss, take "
-        "profit, dan skor confidence keseluruhan."
+        "Menggabungkan output 4 agen sebelumnya menjadi SATU trading plan "
+        "final, dengan penilaian probabilitas berjenjang (High/Medium/Low) "
+        "sebelum menyatakan tidak ada setup sama sekali."
     ),
     backstory=(
-        "Anda adalah quality gate terakhir. Jika salah satu agen sebelumnya "
-        "melaporkan 'undetermined' atau 'insufficient evidence' pada "
-        "komponen krusial, Anda WAJIB menyimpulkan 'NO VALID SETUP' -- "
-        "jangan memaksakan rencana trading dari data tidak lengkap. Setiap "
-        "trading plan HARUS mencantumkan sumber referensi dokumen untuk "
-        "tiap komponen keputusan."
+        "Anda adalah quality gate terakhir. Evaluasi setup dengan LOGIKA "
+        "BERJENJANG berikut, cek dari tingkat tertinggi ke terendah:\n\n"
+        "1. HIGH PROBABILITY: bias 4H jelas (BOS/CHoCH terkonfirmasi) DAN "
+        "entry POI presisi (CE/OB/FVG) terkonfirmasi struktur LTF DAN "
+        "liquidity target jelas.\n"
+        "2. MEDIUM PROBABILITY: bias 4H jelas DAN liquidity target jelas, "
+        "TAPI entry POI/struktur LTF belum sepenuhnya terkonfirmasi (masih "
+        "ada indikasi arah, cukup kuat untuk entry dengan risiko lebih "
+        "besar).\n"
+        "3. LOW PROBABILITY: bias 4H ada indikasi arah (meski belum BOS "
+        "bersih) DAN liquidity target teridentifikasi, meski entry presisi "
+        "tidak tersedia -- entry pakai level observasi kasar.\n\n"
+        "Jika HIGH tidak terpenuhi, cek MEDIUM. Jika MEDIUM tidak "
+        "terpenuhi, cek LOW. HANYA jika ketiganya tidak terpenuhi (bias "
+        "4H benar-benar 'undetermined' tanpa indikasi arah apapun), "
+        "keluarkan pesan NO SETUP.\n\n"
+        "FORMAT OUTPUT UNTUK SETUP VALID (High/Medium/Low) -- ikuti persis:\n\n"
+        "ALCHEMIST SIGNAL\n\n"
+        "{SYMBOL} · {arah: buy/sell}\n"
+        "{harga entry, angka saja}\n\n"
+        "stop {harga SL}\n"
+        "target {harga TP}\n\n"
+        "risk : reward {rasio}\n"
+        "{gauge visual pakai karakter blok: total 15 karakter, isi bagian "
+        "risk pakai '█' sisanya '░' sesuai proporsi rasio}\n\n"
+        "probability: {HIGH/MEDIUM/LOW}\n\n"
+        "reasoning\n"
+        "(MAKSIMAL 3 poin, masing-masing 3-5 kata saja, tanpa emoji, "
+        "bahasa teknis padat)\n"
+        "(baris terakhir: nama file dokumen sumber, dipisah titik tengah "
+        "'·', dicetak miring)\n\n"
+        "FORMAT OUTPUT UNTUK NO SETUP (hanya jika ketiga tingkat gagal):\n"
+        "Keluarkan HANYA teks ini, tanpa section lain apapun:\n"
+        "'⚠️ NO SETUP NO ENTRY'\n\n"
+        "ATURAN KETAT:\n"
+        "- Setiap poin reasoning maksimal 5 kata\n"
+        "- WAJIB sebutkan nama file dokumen sumber di baris terakhir "
+        "(kecuali kondisi NO SETUP NO ENTRY)\n"
+        "- Jangan menjelaskan definisi istilah, cukup sebut istilahnya\n"
+        "- Total keseluruhan pesan maksimal 15 baris\n"
+        "- JANGAN mengulang placeholder yang sama berkali-kali -- setiap "
+        "kondisi output HANYA muncul satu kali sesuai format di atas"
     ),
     tools=[],
     llm=gemini_llm,
+    max_iter=3,
     verbose=True,
     allow_delegation=False,
 )
 
 
-# ====================================================================
-# CREW BUILDER
-# ====================================================================
 def build_crew(symbol: str, interval_htf: str, interval_ltf: str) -> Crew:
     task_bias = Task(
         description=(
@@ -272,7 +287,6 @@ def build_crew(symbol: str, interval_htf: str, interval_ltf: str) -> Crew:
 
 
 if __name__ == "__main__":
-    # Test manual: jalankan satu analisa lengkap
     crew = build_crew(symbol="XAU/USD", interval_htf="4h", interval_ltf="15min")
     result = crew.kickoff()
     print("\n\n=== HASIL TRADING PLAN ===\n")

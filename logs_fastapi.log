@@ -1,0 +1,406 @@
+INFO:     Will watch for changes in these directories: ['/workspaces/Trading-AI']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [16468] using WatchFiles
+/usr/local/python/3.12.1/lib/python3.12/site-packages/pydantic/_internal/_fields.py:132: UserWarning: Field "model_name" in EmbeddingOptions has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+INFO:     Started server process [16472]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-09-11 06:40:04,752 [INFO] Task disubmit: 068eeb4c-478e-4017-839a-a4eb6eff435d untuk XAU/USD
+INFO:     127.0.0.1:56856 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:56858 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56870 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42052 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42060 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42070 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42078 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50242 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50244 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50248 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57506 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57510 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57520 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60942 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60958 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60968 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60974 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52328 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52332 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52338 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48940 - "GET /analyze/068eeb4c-478e-4017-839a-a4eb6eff435d HTTP/1.1" 200 OK
+2026-09-11 06:41:00,950 [INFO] Notifikasi Telegram disubmit untuk task 068eeb4c-478e-4017-839a-a4eb6eff435d
+INFO:     127.0.0.1:48942 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:42:43,501 [INFO] Task disubmit: 0a1f2542-9217-4b33-ad76-789a3e77d0b4 untuk XAU/USD
+INFO:     127.0.0.1:60998 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:32782 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32794 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32798 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39178 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39194 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39206 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54836 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54846 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47334 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47342 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47356 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47362 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33666 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33682 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33698 - "GET /analyze/0a1f2542-9217-4b33-ad76-789a3e77d0b4 HTTP/1.1" 200 OK
+2026-09-11 06:43:28,929 [INFO] Notifikasi Telegram disubmit untuk task 0a1f2542-9217-4b33-ad76-789a3e77d0b4
+INFO:     127.0.0.1:33710 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:43:39,438 [INFO] Task disubmit: 687057b1-f213-43a8-bcee-0500a4498070 untuk XAU/USD
+INFO:     127.0.0.1:41954 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:41962 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54306 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54312 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54324 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48610 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48618 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48620 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55268 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55272 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55282 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55290 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38360 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38364 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38368 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55554 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55556 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55566 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46618 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46634 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46650 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46660 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43736 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43748 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43762 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35856 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35858 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35872 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47806 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47820 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47830 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47834 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52578 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52586 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52588 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46024 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46030 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46036 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50374 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50390 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50400 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54298 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54302 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54316 - "GET /analyze/687057b1-f213-43a8-bcee-0500a4498070 HTTP/1.1" 200 OK
+2026-09-11 06:45:46,721 [INFO] Notifikasi Telegram disubmit untuk task 687057b1-f213-43a8-bcee-0500a4498070
+INFO:     127.0.0.1:54328 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:46:00,138 [INFO] Task disubmit: 7cd817ee-4815-44fc-a697-12f0676010d5 untuk XAU/USD
+INFO:     127.0.0.1:39642 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:39648 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39334 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39346 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39362 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49914 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49922 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49924 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53108 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53110 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53126 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53138 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48478 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48484 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48486 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39290 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39296 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39312 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51090 - "GET /analyze/7cd817ee-4815-44fc-a697-12f0676010d5 HTTP/1.1" 200 OK
+2026-09-11 06:46:51,632 [INFO] Notifikasi Telegram disubmit untuk task 7cd817ee-4815-44fc-a697-12f0676010d5
+INFO:     127.0.0.1:51094 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:47:09,417 [INFO] Task disubmit: b52da90b-d571-4ed3-8579-b258828e478c untuk XAU/USD
+INFO:     127.0.0.1:45086 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:45094 - "GET /analyze/b52da90b-d571-4ed3-8579-b258828e478c HTTP/1.1" 200 OK
+2026-09-11 06:47:09,453 [INFO] Notifikasi Telegram disubmit untuk task b52da90b-d571-4ed3-8579-b258828e478c
+INFO:     127.0.0.1:45100 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:47:15,165 [INFO] Task disubmit: 23ef56b9-8e9a-4b8c-a3bf-0177755614ad untuk XAU/USD
+INFO:     127.0.0.1:58596 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:58610 - "GET /analyze/23ef56b9-8e9a-4b8c-a3bf-0177755614ad HTTP/1.1" 200 OK
+2026-09-11 06:47:15,197 [INFO] Notifikasi Telegram disubmit untuk task 23ef56b9-8e9a-4b8c-a3bf-0177755614ad
+INFO:     127.0.0.1:58624 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:47:23,925 [INFO] Task disubmit: 477919e5-e933-4d75-a906-d47c9c6d33e0 untuk XAU/USD
+INFO:     127.0.0.1:47536 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:47544 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47554 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47560 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37556 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37572 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37580 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44000 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44014 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44026 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47190 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47206 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47216 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47224 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44452 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44458 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44470 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58308 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58318 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58334 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37566 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37572 - "GET /analyze/477919e5-e933-4d75-a906-d47c9c6d33e0 HTTP/1.1" 200 OK
+2026-09-11 06:48:24,532 [INFO] Notifikasi Telegram disubmit untuk task 477919e5-e933-4d75-a906-d47c9c6d33e0
+INFO:     127.0.0.1:37584 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:48:37,961 [INFO] Task disubmit: b8221b20-87dc-455d-b220-177489e29150 untuk XAU/USD
+INFO:     127.0.0.1:42756 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:42762 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57098 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57108 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57122 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57124 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59034 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59036 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59040 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37888 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37890 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37898 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49768 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49778 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49784 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49786 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56388 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56398 - "GET /analyze/b8221b20-87dc-455d-b220-177489e29150 HTTP/1.1" 200 OK
+2026-09-11 06:49:26,419 [INFO] Notifikasi Telegram disubmit untuk task b8221b20-87dc-455d-b220-177489e29150
+INFO:     127.0.0.1:56410 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:49:41,826 [INFO] Task disubmit: 40aa55d4-0eda-4f80-9c56-f305200f6033 untuk XAU/USD
+INFO:     127.0.0.1:46286 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:46290 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46304 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46316 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58058 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58064 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58080 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58086 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55472 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55480 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34230 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34234 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34240 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38576 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38590 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38596 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38602 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50566 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50578 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58880 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58896 - "GET /analyze/40aa55d4-0eda-4f80-9c56-f305200f6033 HTTP/1.1" 200 OK
+2026-09-11 06:50:45,433 [INFO] Notifikasi Telegram disubmit untuk task 40aa55d4-0eda-4f80-9c56-f305200f6033
+INFO:     127.0.0.1:58898 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:50:57,497 [INFO] Task disubmit: fec9d037-acee-49e2-9ffc-4ca03c66b56d untuk XAU/USD
+INFO:     127.0.0.1:56892 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:56894 - "GET /analyze/fec9d037-acee-49e2-9ffc-4ca03c66b56d HTTP/1.1" 200 OK
+2026-09-11 06:50:57,526 [INFO] Notifikasi Telegram disubmit untuk task fec9d037-acee-49e2-9ffc-4ca03c66b56d
+INFO:     127.0.0.1:56898 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:51:05,359 [INFO] Task disubmit: ca044f8e-449e-4357-bab8-2a5ebc5d469d untuk XAU/USD
+INFO:     127.0.0.1:51790 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:51792 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51794 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51360 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51368 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51370 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36078 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36090 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36100 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36106 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49990 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50002 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50012 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37796 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37812 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37828 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53878 - "GET /analyze/ca044f8e-449e-4357-bab8-2a5ebc5d469d HTTP/1.1" 200 OK
+2026-09-11 06:51:50,818 [INFO] Notifikasi Telegram disubmit untuk task ca044f8e-449e-4357-bab8-2a5ebc5d469d
+INFO:     127.0.0.1:53890 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:52:19,840 [INFO] Task disubmit: bfbb28a5-cca7-4dee-9b05-fc78a9e2258a untuk XAU/USD
+INFO:     127.0.0.1:55390 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:55406 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59090 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59104 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59114 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35688 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35692 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35696 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52000 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52010 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52022 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52026 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35650 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35660 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35664 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54152 - "GET /analyze/bfbb28a5-cca7-4dee-9b05-fc78a9e2258a HTTP/1.1" 200 OK
+2026-09-11 06:53:02,251 [INFO] Notifikasi Telegram disubmit untuk task bfbb28a5-cca7-4dee-9b05-fc78a9e2258a
+INFO:     127.0.0.1:54168 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:53:19,219 [INFO] Task disubmit: 820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 untuk XAU/USD
+INFO:     127.0.0.1:45252 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:45256 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56910 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56922 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56928 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44178 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44182 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44190 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46382 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46392 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46404 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46412 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45392 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45398 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45408 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58414 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58424 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58426 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56158 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56172 - "GET /analyze/820a8ed9-b03a-4703-9ea0-ccff8cdf82b6 HTTP/1.1" 200 OK
+2026-09-11 06:54:13,779 [INFO] Notifikasi Telegram disubmit untuk task 820a8ed9-b03a-4703-9ea0-ccff8cdf82b6
+INFO:     127.0.0.1:56188 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+2026-09-11 06:54:33,901 [INFO] Task disubmit: 918d8a01-cfb1-4ea8-9b19-16134e21eadb untuk XAU/USD
+INFO:     127.0.0.1:36006 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:36016 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36020 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33174 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33180 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33192 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33194 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45542 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45552 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45554 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57662 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57670 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57682 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59902 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59910 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59914 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59928 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42888 - "GET /analyze/918d8a01-cfb1-4ea8-9b19-16134e21eadb HTTP/1.1" 200 OK
+2026-09-11 06:55:41,417 [INFO] Task disubmit: 17fc3a7f-f73f-4c32-83e4-4c1482225730 untuk EUR/USD
+INFO:     127.0.0.1:34382 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:34390 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34396 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34400 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59060 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59074 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59088 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59098 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45056 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45070 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45078 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39126 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39136 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39152 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57730 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57744 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57748 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57756 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60458 - "GET /analyze/17fc3a7f-f73f-4c32-83e4-4c1482225730 HTTP/1.1" 200 OK
+2026-09-11 06:56:48,169 [INFO] Task disubmit: 33a056eb-2137-4158-aec8-33759217bf4a untuk XAU/USD
+INFO:     127.0.0.1:47346 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:47362 - "GET /analyze/33a056eb-2137-4158-aec8-33759217bf4a HTTP/1.1" 200 OK
+2026-09-11 06:56:59,715 [INFO] Task disubmit: 9eab6a30-b636-4967-9145-23a165955feb untuk XAU/USD
+INFO:     127.0.0.1:40184 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:40186 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37656 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37664 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37672 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+2026-09-11 06:57:12,218 [INFO] Task disubmit: 044adfe8-76ab-445d-8f48-80890cf4933c untuk XAU/USD
+INFO:     127.0.0.1:49560 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:49572 - "GET /analyze/044adfe8-76ab-445d-8f48-80890cf4933c HTTP/1.1" 200 OK
+2026-09-11 06:57:12,269 [INFO] Notifikasi Telegram disubmit untuk task 044adfe8-76ab-445d-8f48-80890cf4933c
+INFO:     127.0.0.1:49582 - "POST /notify/telegram HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:49588 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49598 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49612 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58858 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58868 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58880 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58896 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34000 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34004 - "GET /analyze/9eab6a30-b636-4967-9145-23a165955feb HTTP/1.1" 200 OK
+2026-09-11 06:58:07,204 [INFO] Task disubmit: ec011fff-bbbc-4e91-aeab-1c59e4976e72 untuk BTC/USD
+INFO:     127.0.0.1:39414 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:39424 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47156 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47160 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47170 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47172 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38978 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38984 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38992 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42914 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42916 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42928 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39264 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39274 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39290 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39300 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50904 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50918 - "GET /analyze/ec011fff-bbbc-4e91-aeab-1c59e4976e72 HTTP/1.1" 200 OK
+2026-09-11 06:59:22,127 [INFO] Task disubmit: e8ce9df8-5e39-4ab6-831d-a9896eea91d2 untuk XAU/USD
+INFO:     127.0.0.1:34264 - "POST /analyze HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:34268 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34270 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34286 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38610 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38614 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38626 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55188 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55200 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55210 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55222 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55076 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55088 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55096 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52630 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52636 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52648 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33218 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33220 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33236 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33252 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47678 - "GET /analyze/e8ce9df8-5e39-4ab6-831d-a9896eea91d2 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:41480 - "HEAD / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:41580 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.

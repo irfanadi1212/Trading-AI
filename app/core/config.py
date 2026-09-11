@@ -21,8 +21,9 @@ class Settings:
 
     # --- LLM Provider (CrewAI) ---
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
+    EXPLABS_API_KEY: str = os.getenv("EXPLABS_API_KEY", "")
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-
+    
     # --- Redis (Celery broker & backend) ---
     REDIS_URL: str = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 

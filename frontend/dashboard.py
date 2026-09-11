@@ -2,10 +2,8 @@
 frontend/dashboard.py
 =========================
 UI Streamlit: pilih instrumen & timeframe, submit ke FastAPI backend,
-polling hasil, opsional kirim ke Telegram.
-
-PENTING: Streamlit HANYA client HTTP ke FastAPI -- tidak ada logika
-CrewAI/analisa yang dijalankan langsung di proses Streamlit ini.
+polling hasil via rerun (bukan blocking loop -- mencegah SessionInfo
+error di lingkungan ter-proxy seperti Codespace).
 """
 
 import time
@@ -19,7 +17,7 @@ logger = logging.getLogger("streamlit_dashboard")
 
 API_BASE_URL = "http://localhost:8000"
 POLL_INTERVAL_SECONDS = 3
-MAX_POLL_ATTEMPTS = 100  # ~5 menit maksimal polling di UI
+MAX_POLL_ATTEMPTS = 100
 
 st.set_page_config(page_title="Alchemist Strategy Analyzer", layout="centered")
 st.title("🔮 Alchemist AI Market Analyzer")
@@ -57,30 +55,6 @@ def submit_analysis(symbol: str, interval_htf: str, interval_ltf: str):
         return None, f"Gagal menghubungi backend: {exc}"
 
 
-def poll_result(task_id: str, progress_bar, status_text):
-    for attempt in range(MAX_POLL_ATTEMPTS):
-        try:
-            response = requests.get(f"{API_BASE_URL}/analyze/{task_id}", timeout=10)
-            response.raise_for_status()
-            data = response.json()
-            status = data["status"]
-
-            progress_bar.progress(min((attempt + 1) / MAX_POLL_ATTEMPTS, 1.0))
-            status_text.text(f"Status: {status} (percobaan ke-{attempt + 1})")
-
-            if status == "SUCCESS":
-                return data["result"], None
-            if status == "FAILURE":
-                return None, "Analisa gagal diproses di backend."
-
-            time.sleep(POLL_INTERVAL_SECONDS)
-
-        except requests.exceptions.RequestException as exc:
-            return None, f"Gagal polling status: {exc}"
-
-    return None, "Timeout menunggu hasil analisa (>5 menit)."
-
-
 def render_trading_plan(result: dict):
     confidence = result.get("confidence_status", "UNKNOWN")
     confidence_color = {
@@ -110,9 +84,7 @@ def render_trading_plan(result: dict):
 
 
 # ------------------------------------------------------------------
-# State management: simpan task_id aktif di session_state, supaya
-# polling berjalan lewat rerun (bukan blocking loop) -- ini mencegah
-# WebSocket session timeout di lingkungan ter-proxy seperti Codespace.
+# State management: polling via rerun, BUKAN blocking loop.
 # ------------------------------------------------------------------
 if "active_task_id" not in st.session_state:
     st.session_state.active_task_id = None
@@ -134,7 +106,6 @@ if submitted:
             st.session_state.send_telegram_flag = send_telegram
             st.rerun()
 
-# --- Bagian polling: jalan setiap kali script di-rerun, BUKAN loop blocking ---
 if st.session_state.active_task_id:
     task_id = st.session_state.active_task_id
     st.info(f"Task ID: `{task_id}`")
@@ -166,7 +137,7 @@ if st.session_state.active_task_id:
                 except requests.exceptions.RequestException as exc:
                     st.warning(f"Gagal mengirim ke Telegram: {exc}")
 
-            st.session_state.active_task_id = None  # selesai, reset state
+            st.session_state.active_task_id = None
 
         elif status == "FAILURE":
             st.error("Analisa gagal diproses di backend.")
@@ -177,7 +148,6 @@ if st.session_state.active_task_id:
             st.session_state.active_task_id = None
 
         else:
-            # Masih PENDING/STARTED/RETRY -- tunggu sebentar, lalu rerun
             time.sleep(POLL_INTERVAL_SECONDS)
             st.rerun()
 
